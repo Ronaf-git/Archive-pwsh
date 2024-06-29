@@ -182,5 +182,4 @@ Stop-Transcript
 #Store hashed value of all current saved archives. Will be usefull to compare the fresh archive with all the previous already saved
 #$files = Get-ChildItem -path "$OutputPath\*" -Recurse -Force -Exclude *.txt
 #$ArchivesHashs = $(foreach ($File in $files){(Get-FileHash $File).Hash } ) | Sort-Object | Get-Unique
-#Verifie si une archive au contenu identique existe deja . Si oui, supprime celle nouvellement creee.
 #if ($ArchivesHashs -contains (Get-FileHash $OutputFullPath).Hash )  {Remove-Item ${OutputFullPath} ; break }
